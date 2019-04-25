@@ -1,4 +1,4 @@
-# GAME
+# SEARCH ENGINE
 
 A lightweight search GIF
 
