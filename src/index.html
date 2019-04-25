@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gooogle Image Search</title>
+</head>
+
+<body class="light">
+
+  <div class="main-container">
+    <!-- common header start -->
+    <header>
+      <strong class="header-top">
+        <span class="mode-selector">🌛</span>
+      </strong>
+    </header>
+    <!-- common header end -->
+
+    <section>
+      <form action="" role="search">
+        <div class="container-search">
+          <div class="container-search-logo">
+              <!-- <img class="object van move-right" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="">             -->
+            <img class="object van move-right" src="https://www.gojek.io/images/gojek-logo.png" alt="">            
+          </div>
+          <div class="container-search-text">
+            <input class="object van move-right move-top-text" id="searchTerm" type="text"
+              placeholder="Enter Your Gif name" name="searchgif" autocomplete="off" autofocus>
+          </div>
+          <div class="container-search-btn">
+            <input value="Search" type="submit" id="searchGif">
+            <input value="Reset" name="reset" type="reset">
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="search-results-container" style="display: none">
+      <div class="search-img-container">
+        <div class="results-container"></div>
+        <ul id="appendSearchImages">
+          <li>
+            <div class="play-pause-gif">
+              <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" width="50"
+                alt="">
+              <div class="description" style="display:none">
+                <p>1990 * 1000<p>
+              </div>
+              <div class="description" style="display:none">
+                  <button >play</button>
+                </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

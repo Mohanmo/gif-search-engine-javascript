@@ -1,0 +1,43 @@
+@media only screen and (max-width: 768px) {
+  
+
+.search-results-container {
+	
+
+	/** Opera **/
+	.search-img-container {
+		ul {
+        text-align: center !important;
+			li {
+				&:hover {
+				
+				}
+				.description {
+				
+				}
+			}			
+		}
+		.results-container {		
+		}
+		.no-results-found{
+	
+		}
+	}
+}
+
+
+
+.container-search-text {
+  input {
+    width: 80% !important;
+    &:focus {
+     
+    }
+  }
+
+  .move-top-right {
+   
+  }
+}
+
+}
