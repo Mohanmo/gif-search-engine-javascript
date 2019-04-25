@@ -23,10 +23,9 @@ export const debounce = (func, delay) => {
     const context = this;
     const args = arguments;
     clearTimeout(inDebounce);
-    inDebounce = setTimeout(() => {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {              
-      func.apply(context, args);      
-    }
+    inDebounce = setTimeout(() => {  
+      console.log('1');               
+      func.apply(context, args);          
     }, delay);    
 };    
 };

@@ -46,17 +46,32 @@ export const searchDebounceCall = () => {
   if (!observerObject.isRegistered) {
     observerObject.isRegistered = true;
     window.addEventListener('scroll', debounce(function () {
-      searchValue();
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {   
+        searchValue();
+      }      
     }, 50), false);
   }
 };
+
+export const searchTypingDebounceCall = () => {
+  if (!observerObject.isRegistered) {    
+    window.addEventListener('keyup', debounce(function () {   
+      observerObject.offset = 0;
+      observerObject.isNoResultsShown = false;  
+      resetResults(); 
+      searchValue();
+    }, 2000), false);
+  }
+};
+
 
 export const searchGIF = (e) => {
   e.preventDefault();
   observerObject.offset = 0;
   observerObject.isNoResultsShown = false;
   addAnimationClass();
-  searchDebounceCall();
+  searchTypingDebounceCall();
+  searchDebounceCall();  
   resetResults();
   return searchValue();
 };
@@ -65,7 +80,6 @@ export const searchValue = () => {
   let searchTearm = document.getElementById('searchTerm').value;
   let apiKey = COMMON().API_KEY;
   let url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${searchTearm}&limit=20&rating=g&offset=${observerObject.offset}`;
-
   getServiceRequest(url, render);
 };
 
