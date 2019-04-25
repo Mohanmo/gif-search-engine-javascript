@@ -23,8 +23,7 @@ export const debounce = (func, delay) => {
     const context = this;
     const args = arguments;
     clearTimeout(inDebounce);
-    inDebounce = setTimeout(() => {  
-      console.log('1');               
+    inDebounce = setTimeout(() => {                       
       func.apply(context, args);          
     }, delay);    
 };    
